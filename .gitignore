@@ -1,0 +1,11 @@
+node_modules
+.next
+.env.local
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+convex/deploy.json
+_credentials*
+.credentials.local
+timelapse-*.csv
+timelapse-*.xlsx
