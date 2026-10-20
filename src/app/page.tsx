@@ -6,6 +6,7 @@ import { useRef } from "react";
 import Typewriter from "@/components/typewriter";
 import GsapScroller from "@/components/gsap-scroller";
 import { FadeIn } from "@/components/fade";
+import { InkOrbitSculpture } from "@/components/ui/ink-orbit-hero";
 
 const TRACKS = [
   {
@@ -53,38 +54,54 @@ export default function Home() {
           style={{ y: heroY, opacity: heroOpacity }}
           className="max-w-6xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28"
         >
-          <p className="font-mono text-[11px] tracking-[0.25em] text-mut mb-6" data-reveal>
-            A PAN INDIA REVERSE ENGINEERING HACKATHON
-          </p>
-          <h1
-            className="font-display leading-[0.92] tracking-[-0.03em]"
-            style={{ fontSize: "clamp(3.4rem, 11vw, 9rem)" }}
-            data-reveal
-          >
-            TIME
-            <br />
-            <span className="text-flux">LAPSE</span>
-          </h1>
-          <Typewriter
-            text="Three tracks. No submissions. Nothing is closed source if you are patient enough."
-            className="font-mono text-sm md:text-base text-mut mt-8 max-w-xl"
-            speed={34}
-            startDelay={500}
-          />
-          <div className="hairline my-10 [transform-origin:left]" data-line-draw />
-          <div className="flex flex-col sm:flex-row gap-4" data-reveal>
-            <Link
-              href="/login"
-              className="inline-flex items-center justify-center bg-ink text-bg font-mono text-xs tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors active:scale-[0.98]"
-            >
-              TEAM LOGIN
-            </Link>
-            <Link
-              href="/admin/login"
-              className="inline-flex items-center justify-center border border-line text-mut hover:text-ink font-mono text-xs tracking-[0.2em] px-8 py-4 transition-colors active:scale-[0.98]"
-            >
-              CONTROL ROOM
-            </Link>
+          <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-14 items-center">
+            <div>
+              <p className="font-mono text-[11px] tracking-[0.25em] text-mut mb-6" data-reveal>
+                A PAN INDIA REVERSE ENGINEERING HACKATHON
+              </p>
+              <h1
+                className="font-display leading-[0.92] tracking-[-0.03em]"
+                style={{ fontSize: "clamp(3.4rem, 11vw, 9rem)" }}
+                data-reveal
+              >
+                TIME
+                <br />
+                <span className="text-flux">LAPSE</span>
+              </h1>
+              <Typewriter
+                text="Three tracks. No submissions. Nothing is closed source if you are patient enough."
+                className="font-mono text-sm md:text-base text-mut mt-8 max-w-xl"
+                speed={34}
+                startDelay={500}
+              />
+              <div className="hairline my-10 [transform-origin:left]" data-line-draw />
+              <div className="flex flex-col sm:flex-row gap-4" data-reveal>
+                <Link
+                  href="/login"
+                  className="inline-flex items-center justify-center bg-ink text-bg font-mono text-xs tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors active:scale-[0.98]"
+                >
+                  TEAM LOGIN
+                </Link>
+                <Link
+                  href="/admin/login"
+                  className="inline-flex items-center justify-center border border-line text-mut hover:text-ink font-mono text-xs tracking-[0.2em] px-8 py-4 transition-colors active:scale-[0.98]"
+                >
+                  CONTROL ROOM
+                </Link>
+              </div>
+            </div>
+            <div className="relative h-[340px] sm:h-[420px] lg:h-[560px] border border-linesoft" data-reveal>
+              <InkOrbitSculpture
+                height="100%"
+                theme="dark"
+                background="#000000"
+                ink="#4fa3a5"
+                spin={0.12}
+                seed={2026}
+                label="TIMELAPSE · 3D"
+                hint="Drag to rotate · Click to reforge"
+              />
+            </div>
           </div>
         </motion.div>
         <div className="max-w-6xl mx-auto px-6 pb-6 font-mono text-[10px] tracking-[0.3em] text-mut flex items-center gap-3" data-reveal>
